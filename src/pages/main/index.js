@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.css'
 
@@ -44,8 +45,7 @@ export default class Main extends Component {
 
     render() {
         const { products, page, productInfo } = this.state,
-            productsPage = productInfo.pages,
-            totalProducts = productInfo.total;
+            productsPage = productInfo.pages;
 
         return (
             <div>
@@ -55,13 +55,9 @@ export default class Main extends Component {
                             <article key={product._id}>
                                 <strong>{product.title}</strong>
                                 <p>{product.description}</p>
-
-                                <a href=" ">Acessar</a>
+                                <Link to={`/products/${product._id}`}>Acessar</Link>
                             </article>
                         ))}
-                    </div>
-                    <div className="total-product">
-                        <p>Total de produtos: {totalProducts}</p>
                     </div>
                     <div className="actions">
                         <button disabled={page === 1} onClick={this.prevPage}>Anterior</button>

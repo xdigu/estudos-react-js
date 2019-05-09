@@ -3,9 +3,8 @@ import './styles.css';
 
 const Header = () => (
     <header id="main-header">
-        Hello World
+        Produtos
     </header>
 );
-
 
 export default Header;
