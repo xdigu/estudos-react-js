@@ -1,3 +1,19 @@
+.products-list .total-product {
+    max-width: 700px;
+    margin: 20px auto 0;
+}
+
+.products-list .total-product p {
+    font-size: 16px;
+    font-weight: bold;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
 .products-list {
     max-width: 700px;
     margin: 20px auto 0;
@@ -11,9 +27,6 @@
     padding: 20px;
     margin-bottom: 20px;
 }
-.products-list strong {
-    
-}
 
 .products-list article p {
     font-size: 14px;
@@ -21,6 +34,7 @@
     margin-top: 5px;
     line-height: 24px;
 }
+
 .products-list article a {
     height: 40px;
     border-radius: 5px;
@@ -40,4 +54,32 @@
 .products-list article a:hover {
     color: #fff;
     background: #da552f;
+}
+
+.products-list .actions {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.products-list .actions button {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background: #da552f;
+}
+
+.products-list .actions button:hover {
+    opacity: 0.8;
+}
+
+.products-list .actions button[disabled] {
+    opacity: 0.5;
+}
+
+.products-list .actions button:hover[disabled] {
+    opacity: 0.5;
 }
