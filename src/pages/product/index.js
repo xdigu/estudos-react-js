@@ -31,7 +31,7 @@ export default class Product extends Component {
                 </div>
                 <div className="action">
                     <p>
-                        <Link to={'/'}> Voltar </Link>
+                        <Link to={'/products'}> Voltar </Link>
                     </p>
                 </div>
             </div>
