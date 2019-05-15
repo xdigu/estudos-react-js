@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Error from './../loginError'
 
 import './styles.css'
 
@@ -42,13 +43,18 @@ export default class Main extends Component {
         this.loadProducts(nextPage);
     };
 
+    checkLogin = () => {
+        const authenticated = localStorage.getItem('authenticated');
 
-    render() {
-        const { products, page, productInfo } = this.state,
-            productsPage = productInfo.pages;
+        console.log(authenticated);
 
-        return (
-            <div>
+        if (authenticated === true) console.log('aqui');
+
+        if (authenticated === 'true') {
+            const { products, page, productInfo } = this.state,
+                productsPage = productInfo.pages;
+
+            return (
                 <div className="products-list">
                     <div>
                         {products.map(product => (
@@ -64,7 +70,15 @@ export default class Main extends Component {
                         <button disabled={page === productsPage} onClick={this.nextPage}>Próximo</button>
                     </div>
                 </div>
-            </div>
-        );
+            );
+        } else {
+            return (
+                <Error />
+            );
+        }
+    };
+
+    render() {
+        return (this.checkLogin());
     }
 };

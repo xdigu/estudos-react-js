@@ -1,0 +1,41 @@
+.main {
+    max-width: 700px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.main .info {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.main .info div{
+    margin-top: 20px;
+}
+
+.main .info div p{
+    font-size: 14px;
+    color: #666;
+}
+
+.main div{
+    margin-top: 20px;
+}
+.main div a {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background: #da552f;
+    text-decoration: none; 
+    transition: all 0.4s;
+}
+
+.main div a:hover {
+    opacity: 0.6;
+}

@@ -16,6 +16,17 @@
     margin-bottom: 20px;
 }
 
+.login .login-info div h2{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.login .login-info div p{
+    margin-bottom: 20px;
+    color: #888;
+    font-size: 14px;
+}
+
 .login .login-info div input {
     height: 40px;
     font-size: 14px;

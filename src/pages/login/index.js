@@ -11,18 +11,27 @@ export default class Login extends Component {
 
     updateUserState = (event) => {
         let user = event.target.value;
-        console.log(user);
+        this.setState({ user });
     };
 
     updatePassState = (event) => {
         let pass = event.target.value;
-        console.log(pass);
+        this.setState({ pass });
+
     };
 
     userAuthentication = () => {
-        console.log('localStorage');
-        localStorage.setItem('acessKey', '1234');
-        // localSession.setItem();
+        const { user, pass } = this.state;
+
+        if (user === pass) {
+            console.log('authenticated');
+            localStorage.setItem('authenticated', true);
+            window.open('/products', '_self');
+        } else {
+            localStorage.setItem('authenticated', false);
+            console.log('deu ruim');
+        }
+
     };
 
     render() {
@@ -30,13 +39,20 @@ export default class Login extends Component {
             <div className="login">
                 <div className="login-info">
                     <div>
+                        <h2>Pagina de login</h2>
+                        <p>Utilize o seu usuário e senha para fazer login e ter acesso aos produtos.</p>
+                    </div>
+
+                    <div>
                         <input onChange={this.updateUserState} placeholder="Usuário" ></input>
                     </div>
+
                     <div>
                         <input onChange={this.updatePassState} type="password" placeholder="Senha"></input>
                     </div>
+
                     <div>
-                        <a> Recuperar Senha</a>
+
                     </div>
                 </div>
                 <div>
